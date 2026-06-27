@@ -1,0 +1,10 @@
+{
+  "name": "invitation",
+  "private": true,
+  "scripts": {
+    "dev": "browser-sync start --server --files \"*.html,*.css,*.js,*.json\" --no-notify"
+  },
+  "devDependencies": {
+    "browser-sync": "^3.0.3"
+  }
+}

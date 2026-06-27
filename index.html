@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Abdelrahman &amp; Tasnim — August 16, 2026</title>
+
+  <!-- Open Graph — controls the preview card on WhatsApp, iMessage, etc.     -->
+  <!-- Replace og:url with your live GitHub Pages URL once deployed.           -->
+  <!-- Replace og:image with an absolute URL to a 1200×630px photo you supply. -->
+  <meta property="og:type"        content="website" />
+  <meta property="og:url"         content="https://bytesiz3d.github.io/Invitation/" />
+  <meta property="og:title"       content="Abdelrahman &amp; Tasnim are getting married" />
+  <meta property="og:description" content="Join us on Sunday, August 16 · 4:30 PM · The Grand Estate, Napa Valley" />
+  <meta property="og:image"       content="https://bytesiz3d.github.io/Invitation/preview.jpg" />
+  <meta property="og:image:width"  content="1200" />
+  <meta property="og:image:height" content="630" />
+
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Montserrat:wght@300;400&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <div class="invitation">
+
+    <!-- ① Names above the carousel -->
+    <header class="invitation__header">
+      <p class="invitation__eyebrow">Together with their families</p>
+      <h1 class="invitation__names">
+        <span class="name" data-field="partner1"></span>
+        <span class="ampersand">&amp;</span>
+        <span class="name" data-field="partner2"></span>
+      </h1>
+      <p class="invitation__tagline">request the honour of your presence</p>
+    </header>
+
+    <!-- ② Carousel — in-flow, fills the middle -->
+    <div class="carousel" aria-hidden="true">
+      <div class="carousel__slide active" style="background-image: url('https://picsum.photos/seed/alpine/1920/1080')"></div>
+      <div class="carousel__slide" style="background-image: url('https://picsum.photos/seed/flowers/1920/1080')"></div>
+      <div class="carousel__slide" style="background-image: url('https://picsum.photos/seed/vineyard/1920/1080')"></div>
+      <div class="carousel__slide" style="background-image: url('https://picsum.photos/seed/sunset/1920/1080')"></div>
+      <div class="carousel__slide" style="background-image: url('https://picsum.photos/seed/garden/1920/1080')"></div>
+    </div>
+
+    <!-- ③ Details below the carousel -->
+    <div class="invitation__body">
+
+      <div class="divider">
+        <span class="divider__line"></span>
+        <span class="divider__icon">&#10022;</span>
+        <span class="divider__line"></span>
+      </div>
+
+      <section class="invitation__details">
+
+        <div class="detail">
+          <p class="detail__label">Date</p>
+          <p class="detail__value" data-field="date"></p>
+        </div>
+
+        <div class="detail">
+          <p class="detail__label">Time</p>
+          <p class="detail__value detail__value--time" data-field="time"></p>
+        </div>
+
+        <div class="detail">
+          <p class="detail__label">Location</p>
+          <p class="detail__value" data-field="location.name"></p>
+          <p class="detail__sub" data-field="location.address"></p>
+          <a
+            class="detail__map-link"
+            data-href="googleMapsLink"
+            target="_blank"
+            rel="noopener noreferrer"
+          >View on Google Maps &#8599;</a>
+        </div>
+
+      </section>
+
+      <div class="divider">
+        <span class="divider__line"></span>
+        <span class="divider__icon">&#10022;</span>
+        <span class="divider__line"></span>
+      </div>
+
+      <section class="invitation__actions">
+
+        <a
+          id="calendar-btn"
+          class="btn btn--outline"
+          data-href="calendarLink"
+          aria-label="Add to Google Calendar"
+        >
+          <svg class="btn__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <rect x="3" y="4" width="18" height="18" rx="2"/>
+            <line x1="16" y1="2" x2="16" y2="6"/>
+            <line x1="8" y1="2" x2="8" y2="6"/>
+            <line x1="3" y1="10" x2="21" y2="10"/>
+          </svg>
+          Add to Calendar
+        </a>
+
+        <a
+          id="rsvp-btn"
+          class="btn btn--filled"
+          data-href="rsvpLink"
+          aria-label="RSVP"
+        >
+          RSVP
+        </a>
+
+      </section>
+
+      <footer class="invitation__footer">
+        <p>Kindly reply by <strong data-field="rsvpDeadline"></strong></p>
+        <p class="invitation__footer-note" data-field="footerNote"></p>
+      </footer>
+
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
